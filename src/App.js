@@ -1,4 +1,5 @@
 import React from "react";
+import GameDetail from "./components/GameDetail";
 import GlobalStyles from "./components/GlobalStyles";
 import Home from "./pages/Home";
 

@@ -3,10 +3,9 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { loadDetail } from "../actions/detailAction";
-const Game = ({ name, image, released,id }) => {
+const Game = ({ name, image, released, id }) => {
   const dispatch = useDispatch();
   const loadDetailHandler = () => {
-    document.body.style.overflow = "hidden";
     dispatch(loadDetail(id));
   };
   return (
