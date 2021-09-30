@@ -19,3 +19,14 @@ export const loadGames = () => async (dispatch) => {
     },
   });
 };
+
+export const fetchSearch = (game_name) => async (dispatch) => {
+  const searchGames = await axios.get(`https://api.rawg.io/api/games?key=30d0f6b2f86e4c94a57e1e5632055702&search=${game_name}&page_size=9`)
+  console.log('searched', searchGames)
+  dispatch({
+    type: "FETCH_SEARCHED",
+    payload: {
+      searched: searchGames.data.results
+    }
+  })
+}

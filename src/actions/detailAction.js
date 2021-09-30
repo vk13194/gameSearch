@@ -1,5 +1,4 @@
 import axios from "axios";
-import { gameDetailsURL, gameScreenshotURL } from "../api";
 
 export const loadDetail = (id) => async (dispatch) => {
   dispatch({
@@ -11,6 +10,8 @@ export const loadDetail = (id) => async (dispatch) => {
   const screenShotData = await axios.get(
     `https://api.rawg.io/api/games/${id}/screenshots?key=30d0f6b2f86e4c94a57e1e5632055702`
   );
+
+
   //console.log('detail',detailData.data)
   dispatch({
     type: "GET_DETAIL",
